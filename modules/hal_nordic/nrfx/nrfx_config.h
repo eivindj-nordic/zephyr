@@ -409,6 +409,8 @@
     #include <nrfx_config_nrf5340_network.h>
 #elif defined(NRF9160_XXAA)
     #include <nrfx_config_nrf9160.h>
+#elif defined(NRF9161_XXAA)
+    #include <nrfx_config_nrf9161.h>
 #else
     #error "Unknown device."
 #endif
