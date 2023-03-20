@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018 Nordic Semiconductor ASA
+ * Copyright (c) 2018-2023 Nordic Semiconductor ASA
  *
  * SPDX-License-Identifier: Apache-2.0
  */
@@ -27,6 +27,8 @@ extern void z_arm_nmi_init(void);
 
 #if defined(CONFIG_SOC_NRF9160)
 #include <system_nrf9160.h>
+#elif defined(CONFIG_SOC_NRF9161_SICA)
+#include <system_nrf9161.h>
 #else
 #error "Unknown SoC."
 #endif

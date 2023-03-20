@@ -1,9 +1,13 @@
 # Nordic Semiconductor nRF91 MCU line
 
-# Copyright (c) 2018 Nordic Semiconductor ASA
+# Copyright (c) 2018-2023 Nordic Semiconductor ASA
 # SPDX-License-Identifier: Apache-2.0
 
 config SOC_NRF9160
+	depends on SOC_SERIES_NRF91X
+	bool
+
+config SOC_NRF9161
 	depends on SOC_SERIES_NRF91X
 	bool
 
@@ -15,9 +19,13 @@ config SOC_NRF9160_SICA
 	bool "NRF9160_SICA"
 	select SOC_NRF9160
 
+config SOC_NRF9161_SICA
+	bool "NRF9161_SICA"
+	select SOC_NRF9161
+
 endchoice
 
 config NRF_ENABLE_ICACHE
 	bool "Instruction cache (I-Cache)"
-	depends on SOC_NRF9160
+	depends on SOC_NRF9160 || SOC_NRF9161
 	default y

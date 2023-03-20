@@ -30,6 +30,7 @@ zephyr_compile_definitions_ifdef(CONFIG_SOC_NRF52840            NRF52840_XXAA)
 zephyr_compile_definitions_ifdef(CONFIG_SOC_NRF5340_CPUAPP      NRF5340_XXAA_APPLICATION)
 zephyr_compile_definitions_ifdef(CONFIG_SOC_NRF5340_CPUNET      NRF5340_XXAA_NETWORK)
 zephyr_compile_definitions_ifdef(CONFIG_SOC_NRF9160             NRF9160_XXAA)
+zephyr_compile_definitions_ifdef(CONFIG_SOC_NRF9161             NRF9161_XXAA)
 
 zephyr_compile_definitions_ifdef(CONFIG_NRF_APPROTECT_LOCK
                                  ENABLE_APPROTECT)
@@ -62,6 +63,7 @@ zephyr_library_sources_ifdef(CONFIG_SOC_NRF52840       ${MDK_DIR}/system_nrf5284
 zephyr_library_sources_ifdef(CONFIG_SOC_NRF5340_CPUAPP ${MDK_DIR}/system_nrf5340_application.c)
 zephyr_library_sources_ifdef(CONFIG_SOC_NRF5340_CPUNET ${MDK_DIR}/system_nrf5340_network.c)
 zephyr_library_sources_ifdef(CONFIG_SOC_NRF9160        ${MDK_DIR}/system_nrf9160.c)
+zephyr_library_sources_ifdef(CONFIG_SOC_NRF9161        ${MDK_DIR}/system_nrf9161.c)
 
 zephyr_library_sources(nrfx_glue.c)
 zephyr_library_sources(${HELPERS_DIR}/nrfx_flag32_allocator.c)

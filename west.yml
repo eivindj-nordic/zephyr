@@ -21,6 +21,8 @@ manifest:
   remotes:
     - name: upstream
       url-base: https://github.com/zephyrproject-rtos
+    - name: eivindj-nordic
+      url-base: https://github.com/eivindj-nordic
 
   #
   # Please add items below based on alphabetical order
@@ -83,7 +85,9 @@ manifest:
       groups:
         - hal
     - name: hal_nordic
-      revision: 6c9f23498ee6a225fee049c8c5b2e1ac760bd4a8
+      remote: eivindj-nordic
+      repo-path: zephyrproject-rtos-hal_nordic-private
+      revision: 20510-add-board-support
       path: modules/hal/nordic
       groups:
         - hal
